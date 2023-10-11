@@ -27,3 +27,7 @@ Route::resource('/users', 'UserController');
 Route::resource('/suppliers', 'SupplierController');
 Route::resource('/companies', 'CompanyController');
 Route::resource('/transactions', 'TransactionController');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
